@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Frota Maringá - Menu Principal</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --bg: #f1f5f9;
+            --text: #0f172a;
+            --tccc: #0284c7;
+            --cv: #16a34a;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); padding: 20px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+        
+        .menu-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        header { margin-bottom: 30px; }
+        header h1 { font-size: 24px; color: var(--primary); margin-bottom: 8px; font-weight: 800; }
+        header p { font-size: 14px; color: #64748b; }
+
+        .opcoes-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.1s, opacity 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .btn-menu:active {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+
+        .btn-tccc { background-color: var(--tccc); border-bottom: 5px solid #0369a1; }
+        .btn-cv { background-color: var(--cv); border-bottom: 5px solid #15803d; }
+
+        .btn-titulo { font-size: 18px; font-weight: bold; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+        .btn-subtitulo { font-size: 12px; opacity: 0.85; font-weight: normal; }
+
+        footer {
+            margin-top: 35px;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <header>
+            <h1>Itinerários Maringá</h1>
+            <p>Selecione a empresa para acessar os itinerários</p>
+        </header>
+
+        <div class="opcoes-menu">
+            <a href="Mapa TCCC.html" class="btn-menu btn-tccc">
+                <div class="btn-titulo">🚌 Rotas TCCC</div>
+                <div class="btn-subtitulo">Mapas online e arquivos para OsmAnd</div>
+            </a>
+
+            <a href="Mapa CV.html" class="btn-menu btn-cv">
+                <div class="btn-titulo">🚐 Rotas Cidade Verde (CV)</div>
+                <div class="btn-subtitulo">Mapas online e arquivos para OsmAnd</div>
+            </a>
+        </div>
+
+        <footer>
+            Painel de Itinerários Operacionais &copy; 2026
+        </footer>
+    </div>
+
+</body>
+</html>
