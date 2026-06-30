@@ -23600,12 +23600,14 @@
 
         // FUNÇÃO CENTRALIZAR MELHORADA (SISTEMA DE TENTATIVA DE RECONEXÃO)
         function centralizarNoMotorista() {
-            if (marcadorMotorista && map) {
-                seguirMotoristaAtivo = true;
-                document.getElementById('btnSeguir').classList.add('ativo');
-                map.setView(marcadorMotorista.getLatLng(), 16);
+            if (seguirMotoristaAtivo) {
+                desativarSeguimentoAuto();
             } else {
-                if(map) {
+                if (marcadorMotorista && map) {
+                    seguirMotoristaAtivo = true;
+                    document.getElementById('btnSeguir').classList.add('ativo');
+                    map.setView(marcadorMotorista.getLatLng(), 16);
+                } else if(map) {
                     map.locate({ setView: false, enableHighAccuracy: true });
                     console.log("A sintonizar... A tentar restabelecer ligação estável ao chip GPS.");
                 }
